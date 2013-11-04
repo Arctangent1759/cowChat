@@ -8,11 +8,12 @@ sessions=["ADMIN"]
 messages=""
 
 get '/' do
-    return cowsay <<__EOF__
-    Welcome to cowchat. 
-    Please create a session:
-    #{MY_HOSTNAME}/new/<your username here>
-__EOF__
+    erb :index
+    #return cowsay <<__EOF__
+    #Welcome to cowchat. 
+    #Please create a session:
+    ##{MY_HOSTNAME}/new/<your username here>
+    #__EOF__
 end
 
 get '/new/*' do
